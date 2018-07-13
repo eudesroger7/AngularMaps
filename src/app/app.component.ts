@@ -7,58 +7,37 @@ import { MouseEvent } from '@agm/core';
     styleUrls: [ './app.component.css' ]
   })
 export class AppComponent  {
-	//set initial map config
-	zoom: number = 15;
-	lat: number = -8.0624086;
-	lng: number = -34.8982486;
 
-	const userLogins = [
-        {"lat": -8.0624086, "lng": -34.8982486, "name": "Eudes1", "id": "2", "date": "2012/12/13"}
-    ];
-
-
-
-	clickedMarker(index: number) {
-	console.log(`clicked the marker: ${label || index}`);
-	console.log(userLogins);
-	}
+  // google maps zoom level
+  zoom: number = 15;
   
-	markerDragEnd(m: marker, $event: MouseEvent) {
-	console.log('dragEnd', m, $event);
-	}
-
-	markers: marker[] = [
+  // initial center position for the map
+  lat: number = -8.0624086;
+  lng: number = -34.8982486;
+  
+  markers: marker[] = [
+	  {
+		lat: -8.0624086,
+		lng: -34.8982486,
+		title: 'a'
+      
+	  },
+	  {
+		lat: -8.0664086,
+		lng: -34.8982486,
+		title: 'b'
+	  },
 	  {
 		lat: -8.0644086,
 		lng: -34.8982486,
-			title: 'teste',
-		label: 'A',
-		draggable: true
-	  
-	  },
-	  {
-		lat: -8.0624086,
-		lng: -34.8980486,
-		label: 'B',
-		draggable: false,
-		title: 'teste2'
-	  },
-	  {
-		lat: -8.0624086,
-		lng: -34.8882486,
-		label: 'C',
-		draggable: true,
-		title: 'teste3'
+		title: 'c'
 	  }
-	]
+  ]
 }
 
 // just an interface for type safety.
 interface marker {
 	lat: number;
 	lng: number;
-  title: string;
-	label?: string;
-	draggable: boolean;
   title: string;
 }

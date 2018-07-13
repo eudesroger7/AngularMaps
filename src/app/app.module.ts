@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
 @NgModule({
   declarations: [
@@ -13,8 +14,9 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     FormsModule,
     AgmCoreModule.forRoot({
-    	apiKey: "AIzaSyDQ0G4qkGpSsjEdBVgCFuF33p34wfjDuOo"
-    })
+    	apiKey: ['AIzaSyDQ0G4qkGpSsjEdBVgCFuF33p34wfjDuOo']
+    }),
+    AgmJsMarkerClustererModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
