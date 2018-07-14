@@ -53,8 +53,6 @@ export class AppComponent  {
 		return this.sortArray(arrayFormatted);
 	}
 
-
-
 	getMarkers() {
 
 		const userLogins = [
@@ -76,11 +74,10 @@ export class AppComponent  {
 			const erro = [{
 				lat: 0,
 				lng: 0,
-				date: null,
+				date: "!did not login",
 				user: null,
 				icon: null
 			}];
-			alert('Este usuário não efetuou logins');
 			return(erro);
 		} else {
 			return this.formatArray(userLogins);
