@@ -1,57 +1,20 @@
 import { Component } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 
-
-	interface marker {
-		lat: number;
-		lng: number;
-		title?: string;
-		icon?: string;
-	}
-
-
-	@Component({
-		selector: 'app-root',
-		templateUrl: './app.component.html',
-		styleUrls: [ './app.component.css' ]
-	})
+@Component({
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: [ './app.component.css' ]
+})
 
 export class AppComponent  {
 
-	sortArray(array) {
-
-		let arraySorted = array.sort(
-			function(a, b) { 
-				let x = a.date;
-				let y = b.date;
-
-				if (x < y) return -1;
-				if (x > y) return 1;
-				return 0;
-			}
-		);
-
-		arraySorted[arraySorted.length-1].icon='./assets/img/marker-blue.png';
-
-		return arraySorted;
-	}
-
-	formatArray(array) {
-
-		let arrayFormatted = [];
-
-		array.map(function(login, index) {
-			arrayFormatted[index] = {
-				lat: login.lat*1,
-				lng: login.lng*1,
-				date: login.date,
-				user: login.name,
-				icon: './assets/img/marker-red.png'
-			}
-		});
-
-		return this.sortArray(arrayFormatted);
-	}
+	resources = {
+		zoom: 20,
+		lat: this.getLocalCenter()[0],
+		lng: this.getLocalCenter()[1],
+		markers: this.getMarkers()
+	};
 
 	getMarkers() {
 
@@ -74,31 +37,50 @@ export class AppComponent  {
 			const erro = [{
 				lat: 0,
 				lng: 0,
-				date: "!did not login",
+				date: null,
 				user: null,
 				icon: null
 			}];
 			return(erro);
 		} else {
-			return this.formatArray(userLogins);
+			return this.sortArray(userLogins);
 		}
 		
-	}	
-
-	getLocalCenter(){
-		return [
-			this.getMarkers()[
-				this.getMarkers().length-1
-			].lat*1,
-			this.getMarkers()[
-				this.getMarkers().length-1
-			].lng*1
-		];
 	}
 
-	// map initial value
-	zoom: number = 23;
-	lat: number = this.getLocalCenter()[0];
-	lng: number = this.getLocalCenter()[1];
-	markers: marker[] = this.getMarkers();
+	sortArray(array) {
+		let arraySorted = array.sort(
+			function(current, next) {
+				if (current.date < next.date) return -1;
+				if (current.date > next.date) return 1;
+				return 0;
+			}
+		);		
+		return this.formatArray(arraySorted);
+	}
+
+	formatArray(array) {
+
+		let arrayFormatted = [];
+
+		array.map(function(login, index) {
+			arrayFormatted[index] = {
+				lat: login.lat*1,
+				lng: login.lng*1,
+				date: login.date,
+				user: login.name,
+				icon: './assets/img/marker-red.png'
+			}
+		});
+		arrayFormatted[arrayFormatted.length-1].icon='./assets/img/marker-blue.png';
+		return arrayFormatted;
+	}
+
+	getLocalCenter(){
+		const centerLocal = this.getMarkers();
+		return [
+			centerLocal[centerLocal.length-1].lat*1,
+			centerLocal[centerLocal.length-1].lng*1
+		];
+	}
 }

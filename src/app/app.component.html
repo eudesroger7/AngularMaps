@@ -1,10 +1,16 @@
+<div class="erro" *ngIf="resources.markers[0].date === null">
+    <img src="../assets/img/danger.svg">
+    <p>User not have logins! </p>
+</div>
+
 <agm-map 
-  [latitude]="lat"
-  [longitude]="lng"
-  [zoom]="zoom">
+  [latitude]="resources.lat"
+  [longitude]="resources.lng"
+  [zoom]="resources.zoom"
+  *ngIf="resources.markers[0].date !== null">
 
   <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
-    <agm-marker *ngFor="let marker of markers; let i = index"
+    <agm-marker *ngFor="let marker of resources.markers; let i = index"
                 [latitude]="marker.lat"
                 [longitude]="marker.lng"
                 [title]="marker.date"
