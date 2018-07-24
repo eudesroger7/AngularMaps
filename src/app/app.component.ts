@@ -17,8 +17,9 @@ export class AppComponent  {
 	};
 
 	getMarkers() {
-
-		const userLogins = [
+		let userLogins;
+		
+		userLogins = [
 		    {"lat": "-8.0624086", "lng": "-34.8982486", "name": "Eudes Roger", "id": "2", "date": "2012/12/13"},
 		    {"lat": "-8.0623086", "lng": "-34.8982486", "name": "Eudes Roger", "id": "2", "date": "2010/03/13"},
 		    {"lat": "-8.0621086", "lng": "-34.8982486", "name": "Eudes Roger", "id": "2", "date": "2020/05/23"},
@@ -32,6 +33,8 @@ export class AppComponent  {
 		    {"lat": "-8.0621086", "lng": "-34.8942486", "name": "Eudes Roger", "id": "2", "date": "2017/07/27"},
 		    {"lat": "-8.0624086", "lng": "-34.8942186", "name": "Eudes Roger", "id": "2", "date": "2011/10/03"}
 		];
+
+		//userLogins = [];
 
 		if(userLogins.length == 0){
 			const erro = [{
@@ -69,7 +72,7 @@ export class AppComponent  {
 				lng: login.lng*1,
 				date: login.date,
 				user: login.name,
-				icon: './assets/img/marker-red.png'
+				icon: './assets/img/marker-gray.png'
 			}
 		});
 		arrayFormatted[arrayFormatted.length-1].icon='./assets/img/marker-blue.png';

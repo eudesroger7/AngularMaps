@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n\nhtml, body {\n    height: 100% !important;\n    padding: 0 !important;\n    margin: 0 !important;\n}"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\n\r\nhtml, body {\r\n    height: 100% !important;\r\n    padding: 0 !important;\r\n    margin: 0 !important;\r\n}"
 
 /***/ }),
 
@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! d:\Eudes\Projetos\Web\cerberus\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\cerberus\src\styles.css */"./src/styles.css");
 
 
 /***/ })

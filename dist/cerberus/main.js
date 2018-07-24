@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map {\r\n\theight: 100%; \r\n}\r\n\r\n.erro {\r\n\tbackground-color: #080808;\r\n\tbackground-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%230b0b0b' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%230e0e0e' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23101010' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23121212' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23141414' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23151515' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23171717' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23181818' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23191919' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%231a1a1a' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E\");\t\r\n\tbackground-attachment: fixed;\r\n\tbackground-size: cover;\r\n\tbackground-position: center;\r\n\ttext-align: center;\r\n\theight: 100%;\r\n\tpadding-top: 150px;\r\n}\r\n\r\n.erro img {\r\n\twidth: 200px;\r\n\theight: auto;\r\n}\r\n\r\n.erro p {\r\n\tfont-size: 35px;\r\n\tfont-weight: bold;\r\n\tcolor: #FCFF4D;\r\n\ttext-transform: uppercase;\r\n}\r\n"
+module.exports = "agm-map {\r\n\theight: 100%; \r\n}\r\n\r\n.erro-backdrop {\r\n\tbackground-color: rgba(0,0,0,0.6);\r\n\theight: 100%;\r\n\tpadding-top: 150px;\r\n\tz-index: 9999999999;\r\n\tposition: fixed;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tbottom: 0;\r\n}\r\n\r\n.erro-modal {\r\n\tposition: fixed;\r\n    width: 500px;\r\n    height: 300px;\r\n    top: 50%;\r\n    left: 50%;\r\n    margin-left: -250px;\r\n    margin-top: -150px;\r\n    background-color: #333;\r\n    text-align: center;\r\n    border-radius: 15px;\r\n}\r\n\r\n.erro-modal img {\r\n\twidth: 100px;\r\n\theight: auto;\r\n\tmargin-top: 2rem;\r\n}\r\n\r\n.erro-modal p {\r\n\tfont-size: 25px;\r\n\tfont-weight: bold;\r\n\tcolor: #FCFF4D;\r\n\ttext-transform: uppercase;\r\n}\r\n\r\n.btn-map-erro {\r\n\twidth: 65%;\r\n\theight: 40px;\r\n\tbackground: #FCFF4D;\r\n\tborder: none;\r\n\tborder-radius: 10px;\r\n\tfont-size: 18px;\r\n}"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "agm-map {\r\n\theight: 100%; \r\n}\r\n\r\n.erro {\r\n\tbackgro
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"erro\" *ngIf=\"resources.markers[0].date === null\">\r\n    <img src=\"../assets/img/danger.svg\">\r\n    <p>User not have logins! </p>\r\n</div>\r\n\r\n<agm-map \r\n  [latitude]=\"resources.lat\"\r\n  [longitude]=\"resources.lng\"\r\n  [zoom]=\"resources.zoom\"\r\n  *ngIf=\"resources.markers[0].date !== null\">\r\n\r\n  <agm-marker-cluster imagePath=\"https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m\">\r\n    <agm-marker *ngFor=\"let marker of resources.markers; let i = index\"\r\n                [latitude]=\"marker.lat\"\r\n                [longitude]=\"marker.lng\"\r\n                [title]=\"marker.date\"\r\n                [iconUrl]=\"marker.icon\">\r\n\r\n                <agm-info-window>\r\n                  <strong>\r\n                      <span>\r\n                        User: {{marker.user}}<br/>\r\n                        Accessed in: {{marker.date}}<br/>\r\n                        Local: {{marker.lat}} | {{marker.lng}}\r\n                      </span>\r\n                  </strong>                  \r\n                </agm-info-window>\r\n    </agm-marker>\r\n  </agm-marker-cluster>\r\n\r\n</agm-map>"
+module.exports = "<agm-map \r\n  [latitude]=\"resources.lat\"\r\n  [longitude]=\"resources.lng\"\r\n  [zoom]=\"resources.zoom\">\r\n\r\n  <agm-marker-cluster imagePath=\"https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m\">\r\n    <agm-marker *ngFor=\"let marker of resources.markers; let i = index\"\r\n                [latitude]=\"marker.lat\"\r\n                [longitude]=\"marker.lng\"\r\n                [title]=\"marker.date\"\r\n                [iconUrl]=\"marker.icon\">\r\n\r\n                <agm-info-window>\r\n                  <strong>\r\n                      <span>\r\n                        User: {{marker.user}}<br/>\r\n                        Accessed in: {{marker.date}}<br/>\r\n                        Local: {{marker.lat}} | {{marker.lng}}\r\n                      </span>\r\n                  </strong>                  \r\n                </agm-info-window>\r\n    </agm-marker>\r\n  </agm-marker-cluster>\r\n</agm-map>\r\n\r\n<div class=\"erro-backdrop\" *ngIf=\"resources.markers[0].date === null\">\r\n  <div class=\"erro-modal\">\r\n    <img src=\"../assets/img/danger.svg\">\r\n    <p>User not have logins! </p>\r\n    <a  href=\"/home\">\r\n      <button type=\"button\" class=\"btn-map-erro\">\r\n        Ok\r\n      </button>\r\n    </a>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -73,7 +73,8 @@ var AppComponent = /** @class */ (function () {
         };
     }
     AppComponent.prototype.getMarkers = function () {
-        var userLogins = [
+        var userLogins;
+        userLogins = [
             { "lat": "-8.0624086", "lng": "-34.8982486", "name": "Eudes Roger", "id": "2", "date": "2012/12/13" },
             { "lat": "-8.0623086", "lng": "-34.8982486", "name": "Eudes Roger", "id": "2", "date": "2010/03/13" },
             { "lat": "-8.0621086", "lng": "-34.8982486", "name": "Eudes Roger", "id": "2", "date": "2020/05/23" },
@@ -87,6 +88,7 @@ var AppComponent = /** @class */ (function () {
             { "lat": "-8.0621086", "lng": "-34.8942486", "name": "Eudes Roger", "id": "2", "date": "2017/07/27" },
             { "lat": "-8.0624086", "lng": "-34.8942186", "name": "Eudes Roger", "id": "2", "date": "2011/10/03" }
         ];
+        //userLogins = [];
         if (userLogins.length == 0) {
             var erro = [{
                     lat: 0,
@@ -119,7 +121,7 @@ var AppComponent = /** @class */ (function () {
                 lng: login.lng * 1,
                 date: login.date,
                 user: login.name,
-                icon: './assets/img/marker-red.png'
+                icon: './assets/img/marker-gray.png'
             };
         });
         arrayFormatted[arrayFormatted.length - 1].icon = './assets/img/marker-blue.png';
@@ -258,7 +260,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! d:\Eudes\Projetos\Web\cerberus\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\cerberus\src\main.ts */"./src/main.ts");
 
 
 /***/ })
