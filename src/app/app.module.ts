@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { MapComponent } from './components/map/map.component';
+
 import { AgmCoreModule } from '@agm/core';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+import { AppRoutingModule } from './app.routing';
 
 
 @NgModule({
@@ -14,9 +17,10 @@ import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
     AgmCoreModule.forRoot({
     	apiKey: 'AIzaSyDQ0G4qkGpSsjEdBVgCFuF33p34wfjDuOo'
     }),
-    AgmJsMarkerClustererModule
+    AgmJsMarkerClustererModule,
+    AppRoutingModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, MapComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

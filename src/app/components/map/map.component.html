@@ -1,0 +1,24 @@
+<agm-map 
+  [latitude]="resources.lat"
+  [longitude]="resources.lng"
+  [zoom]="resources.zoom">
+
+  <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
+    <agm-marker *ngFor="let marker of resources.markers; let i = index"
+                [latitude]="marker.lat"
+                [longitude]="marker.lng"
+                [title]="marker.date"
+                [iconUrl]="marker.icon">
+
+                <agm-info-window>
+                  <strong>
+                      <span>
+                        <!-- User: {{marker.user}}<br/> -->
+                        Accessed in: {{marker.date}}<br/>
+                        Local: {{marker.lat}} | {{marker.lng}}
+                      </span>
+                  </strong>                  
+                </agm-info-window>
+    </agm-marker>
+  </agm-marker-cluster>
+</agm-map>

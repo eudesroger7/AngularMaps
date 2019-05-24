@@ -1,0 +1,50 @@
+agm-map {
+	height: 100%; 
+}
+
+.erro-backdrop {
+	background-color: rgba(0,0,0,0.6);
+	height: 100%;
+	padding-top: 150px;
+	z-index: 9999999999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.erro-modal {
+	position: fixed;
+    width: 500px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -150px;
+    background-color: #333;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.erro-modal img {
+	width: 100px;
+	height: auto;
+	margin-top: 2rem;
+}
+
+.erro-modal p {
+	font-size: 25px;
+	font-weight: bold;
+	color: #FCFF4D;
+	text-transform: uppercase;
+}
+
+.btn-map-erro {
+	width: 65%;
+	height: 40px;
+	background: #FCFF4D;
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+}
